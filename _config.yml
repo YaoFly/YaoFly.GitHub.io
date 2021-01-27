@@ -1,13 +1,13 @@
 # Site settings
-title:          Rain
+title:          YaoFly in action
 description:    "Rain is a simple and clean Jekyll theme with focus on content."
-url:            https://yaofly.github.io
+url:            https://yaofly.github.io/
 
 # Author
 author:
-  name:         Inela Avdic Hukic
-  email:        inelaah@gmail.com
-  url:          https://inelaah.com
+  name:         YaoFly
+  email:        2465939235@qq.com
+#  url:          https://inelaah.com
 
 # Build settings
 markdown:       kramdown
@@ -24,7 +24,7 @@ plugins:
   # - jemoji #Uncomment this to allow emoji in your post
 
 # Permalinks
-permalink:      /:year-:month-:day/:title/
+permalink:      /:year-:month-:day/:title
 paginate:       5
 
 # Related posts settings
@@ -34,7 +34,7 @@ related_posts_section:
 
 # Links to social media
 social:
-  email: inelaah@gmail.com
-  github: https://github.com/inelaah
-  twitter: https://twitter.com
-  linkedin: https://ba.linkedin.com/in/inela-avdic-hukic-322354131
+  email: 2465939235@qq.com
+  github: https://github.com/YaoFly
+#  twitter: https://twitter.com
+#  linkedin: https://ba.linkedin.com/in/inela-avdic-hukic-322354131
