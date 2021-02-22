@@ -44,7 +44,7 @@ ORDER BY create_time DESC limit 1 for update
 /**
  * 事务一是一条带有for update 的select语句
  * lock_mode X waiting Record lock
- * 可以看到ID为4071457的事务在等待`t_finance_sys_version_record`表中,索引名为idx_version_record_orgid的索引上堆物理编号为10的行锁
+ * 可以看到ID为4071457的事务在等待`t_finance_sys_version_record`表中,索引名为idx_version_record_orgid的索引上堆物理编号为10的记录锁
  */
 RECORD LOCKS space id 2903 page no 5 n bits 112 index idx_version_record_orgid of table `vv_finance`.`t_finance_sys_version_record` trx id 4071457 lock_mode X waiting
 Record lock, heap no 10 PHYSICAL RECORD: n_fields 2; compact format; info bits 0
