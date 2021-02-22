@@ -116,7 +116,7 @@ Record lock, heap no 40 PHYSICAL RECORD: n_fields 2; compact format; info bits 0
  * lock_mode X locks gap before rec insert intention waiting Record lock
  * 可以看出来事务二正在申请heap no 10 PHYSICAL RECORD堆物理编号10的插入意向锁（insert intention lock）。   
    为当前数据库事务等级为RR，所以数据库在进行插入操作时，会申请要插入数据周围的间隙锁，防止产生幻读。注意此时插入意向锁是一种特殊的间隙锁。   
- * 事务二在申请到heap no 10 的记录锁之后，事务一也排队申请此此路所锁，而事务二对同一条记录间隙锁的申请排队排在了事务一之后，导致了死锁的发生。
+ * 事务二在申请到heap no 10 的记录锁之后，事务一也排队申请此记录锁，而事务二对同一条记录间隙锁的申请排队排在了事务一之后，导致了死锁的发生。
  */
 RECORD LOCKS space id 2903 page no 5 n bits 112 index idx_version_record_orgid of table `vv_finance`.`t_finance_sys_version_record` trx id 4071456 
 lock_mode X locks gap before rec insert intention waiting Record lock, heap no 10 PHYSICAL RECORD: n_fields 2; compact format; info bits 0
