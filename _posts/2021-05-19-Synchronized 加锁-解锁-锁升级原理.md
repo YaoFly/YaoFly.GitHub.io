@@ -4,8 +4,6 @@ title:  "Synchronized 加锁-解锁-锁升级原理"
 author: "YaoFly"
 tags: ["Java", "Jvm", "biased lock", "thin lock", "fat lock", "inflation"]
 ---   
-# Synchronized 加锁-解锁-锁升级 原理
-
 在网上看了一堆资料都只是云里雾里，只讲了大概流程，具体实现原理不够清晰。后来跟随R大([RednaxelaFX](https://www.zhihu.com/people/rednaxelafx))的指路阅读了几篇相关的原版英文论文，豁然开朗。所以写下这篇总结归纳，不然过几个礼拜学来的知识又消失在空气中了 = =！
 
 ### Mark word
