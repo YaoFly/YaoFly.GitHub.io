@@ -16,8 +16,7 @@ tags: ["Java", "Jvm", "biased lock", "thin lock", "fat lock", "inflation"]
 
 ### 偏向锁（Biased lock）
 
-图3.1中倒数第三个bit位用于控制偏向锁的开关，如果bit位为0，则表示禁用偏向锁功能，反之开启。
-
+图3.1中无锁（unlocked）和偏向锁（biased）的情况中，倒数第三个bit位用于控制偏向锁的开关，如果bit位为0，则表示禁用偏向锁功能，反之开启。同一个对象只允许偏向一次，解锁后该对象偏向功能关闭。另外JVM启动的前4s由于性能低下，创建的对象也会默认关闭偏向锁，4s之后的对象正常开启偏向锁功能。
 图3.5所示，当请求偏向锁的时候，会通过CAS将当前线程的引用赋值到mark word中，同时Lock records锁记录列表中会有一条锁记录，锁记录预留了尚未使用的mark word存储空间和指向被锁对象的引用，此锁记录用于之后可能膨胀为轻量锁时使用。
 
 ![biased lock](/images/biased lock.png)
