@@ -112,6 +112,6 @@ mark word各个状态和其之间的转换如图3.6所示：
 
 ## 参考
 
-- https://www.zhihu.com/question/55075763    R大指路的知乎回答
+- [Java 的偏向锁是怎么实现的?](https://www.zhihu.com/question/55075763)    R大指路的知乎回答
 - [Evaluating and improving biased locking in the HotSpot Virtual Machine](https://link.zhihu.com/?target=http%3A//www.diva-portal.org/smash/get/diva2%3A754541/FULLTEXT01.pdf)   
 
