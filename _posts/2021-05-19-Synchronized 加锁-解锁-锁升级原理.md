@@ -24,7 +24,8 @@ lock record记录包含两个部分，一个是从mark word拷贝过来的对象
 
 ### 重量锁（Fat lock）
 
-在重量级锁中没有竞争到锁的对象会 park 被挂起，退出同步块时 unpark 唤醒后续线程。唤醒操作涉及到操作系统调度会有额外的开销。持有的锁结构是一个ObjectMonitor对象，ObjectMonitor 中包含一个同步队列（由 _cxq 和 _EntryList 组成）一个等待队列（ _WaitSet ）
+在重量级锁中没有竞争到锁的对象会 park 被挂起，退出同步块时 unpark 唤醒后续线程。唤醒操作涉及到操作系统调度会有额外的开销。持有的锁结构是一个ObjectMonitor对象，ObjectMonitor 中包含一个同步队列（由 _cxq 和 _EntryList 组成）一个等待队列（ _WaitSet ）。
+ps: 重量锁的实现原理文中没有涉及，故在此暂不做深究，简单概括，以后有时间再补上哈哈。。
 
 - 被notify或 notifyAll 唤醒时根据 policy 策略选择加入的队列（policy 默认为 0）
 - 退出同步块时根据 QMode 策略来唤醒下一个线程（QMode 默认为 0）
