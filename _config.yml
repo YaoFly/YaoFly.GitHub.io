@@ -38,3 +38,10 @@ social:
   github: https://github.com/YaoFly
 #  twitter: https://twitter.com
 #  linkedin: https://ba.linkedin.com/in/inela-avdic-hukic-322354131
+
+deploy:
+  type: git
+  repo:
+    github: https://github.com/YaoFly/YaoFly.GitHub.io.git
+    coding: https://e.coding.net/yaofly/blog/YaoFly.GitHub.io.git
+  branch: master
